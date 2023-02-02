@@ -8,7 +8,7 @@ const highScoreEl = document.querySelector(".highscore");
 
 //? For the Next round
 const secBtn = document.querySelector(".btn");
-const changable = document.querySelector("changable");
+const changable = document.querySelector(".changable");
 
 
 //* Secret Number
@@ -17,6 +17,7 @@ console.log(secretNum);
 
 let currentScore = 20;
 let highScore = 20;
+let currentLevel = 1;
 
 
 
@@ -55,8 +56,8 @@ btn.addEventListener("click", () => {
                 currentScoreEl.innerHTML = 0;
 
                 bodyEl.style.backgroundColor = "#EC7063";
-            }
-        }
+            };
+        };
 
 
     }else {
@@ -68,4 +69,11 @@ btn.addEventListener("click", () => {
 
 secBtn.addEventListener("click", () => {
     console.log("Hello world");
+
+    
+
+    if (changable === 20) {
+        secBtn.setAttribute("disabled", "disabled");
+    }
+
 });
