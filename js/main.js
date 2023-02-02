@@ -1,10 +1,14 @@
 const val = document.querySelector(".guess");
 const btn = document.querySelector(".check");
 const score = document.querySelector(".score");
+const message = document.querySelector(".message");
+const body = document.querySelector(".body");
 
-const changedScore = score.innerHTML = 20;
+let changedScore = 20;
 
-const randomNum = Math.floor(Math.random() * 20);
+const randomNum = Math.trunc(Math.random() * 20);
+
+score.innerHTML = changedScore;
 
 
 
@@ -15,14 +19,22 @@ btn.addEventListener("click", (a) => {
     const result = +val.value;
     console.log(result);
     
-    if(+result) {
-        if(result === randomNum) {
-            alert("TRUE, You are the best!!");
-        }else{
-            alert("Not Bad!");
-        };
-    }else{
-        alert("It is not a number, Please type a number!")
+    for (let i = 20; i > 0; i--) {
+        if(+result) {
+                if(result === randomNum) {
+                    message.innerHTML = "True";
+                    body.classList.add("bg_color");
+
+                }else{
+                    score.innerHTML = changedScore-1;
+                    message.innerHTML = "Wrong!";
+                    body.classList.add("bg_wrong")
+                };
+            }else{
+                alert("It is not a number, Please type a number!")
+        }
     }
+
+    
 
 });

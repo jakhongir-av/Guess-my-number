@@ -117,3 +117,12 @@ h1 {
 .label-score {
   margin-bottom: 2rem;
 }
+
+
+.bg_color {
+  background-color: green;
+}
+
+.bg_wrong {
+  background-color: red;
+}
