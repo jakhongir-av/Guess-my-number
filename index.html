@@ -7,12 +7,14 @@
     <link rel="stylesheet" href="./css/main.css" />
     <title>Guess My Number!</title>
   </head>
-  <body class="body">
+  <body>
     <header>
-      <h1>Guess My Number!</h1>
-      <p class="between">(Between <span class="changable">1</span> and 20)</p>
+      <h1 class="endGameMessage">Guess My Number!</h1>
+      <p class="between">
+        (Round <span class="currentRound">1</span> of 20)
+      </p>
       <button class="btn newRound" disabled>Next round!</button>
-      <div class="number">?</div>
+      <div class="secretNumber number">?</div>
     </header>
     <main>
       <section class="left">
@@ -21,13 +23,13 @@
       </section>
       <section class="right">
         <p class="message">Start guessing...</p>
-        <p class="label-score">💯 Score: <span class="score">20</span></p>
+        <p class="label-score">💯 Score: <span class="score">0</span></p>
         <p class="label-highscore">
           🥇 Highscore: <span class="highscore">0</span>
         </p>
       </section>
     </main>
 
-    <script src="./js/main.js"></script>                                                                                                                                                                                                                                         
+    <script type="module" src="./js/main.js"></script>
   </body>
 </html>

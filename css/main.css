@@ -118,11 +118,6 @@ h1 {
   margin-bottom: 2rem;
 }
 
-
-.bg_color {
-  background-color: green;
-}
-
-.bg_wrong {
-  background-color: red;
+.btn:disabled {
+  background-color: rgb(163, 163, 163);
 }
